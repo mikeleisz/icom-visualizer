@@ -47,8 +47,6 @@ function handleFile(file) {
     }
     
     audioFile = loadSound(file, finishedLoading);
-  } else {
-    audioFile = null;
   }
 }
 
@@ -56,7 +54,7 @@ function setup() {
   createCanvas(800, 800);
   angleMode(DEGREES);
   
-  filInput = createFileInput(handleFile);
+  fileInput = createFileInput(handleFile);
 
   audioAmplitude = new p5.Amplitude();
 
