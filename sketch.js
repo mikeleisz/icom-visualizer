@@ -286,7 +286,10 @@ function drawWaveform(waveform) {
 function mousePressed() {
   if (loading) return;
   clientEvent = true;
-  togglePlay();
+
+  if (mouseX >= 0 && mouseX <= width && mouseY >= 0 && mouseY <= height) {
+    togglePlay();
+  }
 }
 
 function togglePlay() {
