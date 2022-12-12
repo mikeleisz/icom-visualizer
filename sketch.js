@@ -84,7 +84,9 @@ function setup() {
 }
 
 function draw() {
-  if (!loading && !audioFile.isPlaying() && !clientEvent) {
+  if (!loading && !clientEvent) {
+    if (audioFile == null) return;
+    if (audioFile.isPlaying()) return;
     textSize(64);
     textAlign(CENTER, CENTER);
     text(displayText, width/2, height/2);
